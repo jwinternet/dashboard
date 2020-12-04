@@ -2,12 +2,11 @@
 
 __author__ = "Jared Winter"
 __started__ = "12/1/2020"
-__revision__ = "v0.0.1"
+__revision__ = "v0.0.2"
 
 import csv
 import openpyxl
 import readline
-import pyyaml
 import sys
 
 
