@@ -3,12 +3,11 @@
 
 __author__ = "Jared Winter"
 __started__ = "12/1/2020"
-__revision__ = "v0.0.2"
+__revision__ = "v0.0.3"
 
 import sys
 
 import my_tools
-import coin_flip
 import password_generator
 import coin_flip
 import random_number
@@ -37,7 +36,7 @@ def main():
 				"\n\n\t\t\t\t\t",
 				my_tools.PyColors.Fg.light_green,
 				"  Project Version <|> Last Updated\n\t\t\t\t\t\t\t",
-				"  0.0.2         12/04/2020",
+				"  0.0.3         12/05/2020",
 				my_tools.PyColors.reset
 			)
 
@@ -45,10 +44,9 @@ def main():
 			first_choice = input(
 				"\n 1) General"
 				"\n 2) Game of Chance"
-				"\n 3) Extras"
-				"\n 4) Release Notes"
-				"\n 5) Quit"
-				"\n\n Please select from one of the options listed above (1-5): "
+				"\n 3) Release Notes"
+				"\n 4) Quit"
+				"\n\n Please select from one of the options listed above (1-4): "
 			).strip()
 
 			#
@@ -124,46 +122,8 @@ def main():
 					except ValueError:
 						continue
 
-			# Miscellaneous extra programs, mostly for fun
-			elif first_choice == "3":
-
-				# Start of a loop; A module banner followed by a menu of
-				# options which the user can pick from, under the module
-				while True:
-					my_tools.print_lines()
-					print(
-						"\n\t\t\t\t ",
-						my_tools.PyColors.Bg.light_blue,
-						"Extras",
-						my_tools.PyColors.reset
-					)
-					second_choice = input(
-							"\n 1) Password Generator"
-							"\n 2) Coin Flip & Random Number Generator"
-							"\n 3) About Module"
-							"\n 4) Return To Main Menu"
-							"\n\n Please select from one of the options listed above (1-4): "
-					).strip()
-
-					# Randomly generates 10 random passwords
-					if second_choice == "1":
-						coin_flip.password_generator()
-
-					# Offers a coin flip program and a random number program
-					elif second_choice == "2":
-						coin_flip.game_of_chance()
-
-					# Provides basic information on the module and how to use it, along with tips
-					# and tricks
-					elif second_choice == "3":
-						coin_flip.about_module()
-
-					# Returns to the previous menu
-					elif second_choice == "4":
-						break
-
 			# How to section on reporting any issues with this program
-			elif first_choice == "4":
+			elif first_choice == "3":
 				my_tools.print_lines()
 				print(
 					"\n\t\t\t ",
@@ -177,7 +137,7 @@ def main():
 				continue
 
 			# Enables to user to exit the program without a keyboard interrupt
-			elif first_choice == "5":
+			elif first_choice == "4":
 				print("\n\n ...Exiting program\n\n")
 				sys.exit(0)
 
