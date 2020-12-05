@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Format Converter"""
 
 __author__ = "Jared Winter"
 __started__ = "12/1/2020"

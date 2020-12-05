@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Dashboard"""
 
 __author__ = "Jared Winter"
 __started__ = "12/1/2020"
@@ -7,7 +8,10 @@ __revision__ = "v0.0.2"
 import sys
 
 import my_tools
-import extras
+import coin_flip
+import password_generator
+import coin_flip
+import random_number
 
 
 def main():
@@ -39,7 +43,7 @@ def main():
 
 			# Presents the user with a menu of options to choose from
 			first_choice = input(
-				"\n 1) Time and Date"
+				"\n 1) General"
 				"\n 2) Game of Chance"
 				"\n 3) Extras"
 				"\n 4) Release Notes"
@@ -52,51 +56,34 @@ def main():
 				while True:
 					my_tools.print_lines()
 					print(
-						"\n\t\t\t ",
+						"\t\t\t\t\t\t\t ",
 						my_tools.PyColors.Bg.light_blue,
-						"Time and Date Module",
+						"General Module",
 						my_tools.PyColors.reset
 					)
 
 					second_choice = input(
-						"\n 1) Today's Date"
-						"\n 2) Tomorrow"
-						"\n 3) Yesterday"
-						"\n 4) About Module"
-						"\n 5) Return To Main Menu"
-						"\n\n Please select from one of the options listed above (1-5): "
+						"\n 1) Password Generator"
+						"\n 2) Coin Flip"
+						"\n 3) Random Number Generator"
+						"\n 4) Return To Main Menu"
+						"\n\n Please select from one of the options listed above (1-4): "
 					).strip()
 
 					#
 					if second_choice == "1":
-
-						#
-						my_tools.print_lines()
-						my_tools.get_now()
+						password_generator.main()
 
 					#
 					elif second_choice == "2":
-
-						#
-						my_tools.print_lines()
-						my_tools.get_now()
+						coin_flip.main()
 
 					#
 					elif second_choice == "3":
-
-						#
-						my_tools.print_lines()
-						my_tools.get_now()
-
-					# Provides further information about the options listed
-					elif second_choice == "4":
-
-						#
-						my_tools.print_lines()
-						my_tools.get_now()
+						random_number.main()
 
 					# Returns the user to the main menu
-					elif second_choice == "5":
+					elif second_choice == "4":
 						break
 
 			#
@@ -160,16 +147,16 @@ def main():
 
 					# Randomly generates 10 random passwords
 					if second_choice == "1":
-						extras.password_generator()
+						coin_flip.password_generator()
 
 					# Offers a coin flip program and a random number program
 					elif second_choice == "2":
-						extras.game_of_chance()
+						coin_flip.game_of_chance()
 
 					# Provides basic information on the module and how to use it, along with tips
 					# and tricks
 					elif second_choice == "3":
-						extras.about_module()
+						coin_flip.about_module()
 
 					# Returns to the previous menu
 					elif second_choice == "4":
