@@ -11,6 +11,7 @@ import my_tools
 import password_generator
 import coin_flip
 import random_number
+import calculator
 
 
 def main():
@@ -54,8 +55,9 @@ def main():
 				while True:
 					my_tools.print_lines()
 					print(
-						"\t\t\t\t\t\t\t ",
-						my_tools.PyColors.Bg.light_blue,
+						"\t\t\t\t\t\t\t\t ",
+						my_tools.PyColors.bold,
+						my_tools.PyColors.Fg.dark_green,
 						"General Module",
 						my_tools.PyColors.reset
 					)
@@ -64,8 +66,9 @@ def main():
 						"\n 1) Password Generator"
 						"\n 2) Coin Flip"
 						"\n 3) Random Number Generator"
-						"\n 4) Return To Main Menu"
-						"\n\n Please select from one of the options listed above (1-4): "
+						"\n 4) Calculator"
+						"\n 5) Return To Main Menu"
+						"\n\n Please select from one of the options listed above (1-5): "
 					).strip()
 
 					#
@@ -80,8 +83,12 @@ def main():
 					elif second_choice == "3":
 						random_number.main()
 
-					# Returns the user to the main menu
+					#
 					elif second_choice == "4":
+						calculator.main()
+
+					# Returns the user to the main menu
+					elif second_choice == "5":
 						break
 
 			#
