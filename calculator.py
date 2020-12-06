@@ -3,7 +3,7 @@
 
 __author__ = "Jared Winter"
 __started__ = "12/5/2020"
-__revision__ = "v0.0.1"
+__revision__ = "v0.0.2"
 
 import readline
 

@@ -3,7 +3,7 @@
 
 __author__ = "Jared Winter"
 __started__ = "12/1/2020"
-__revision__ = "v0.0.3"
+__revision__ = "v0.0.5"
 
 import sys
 
@@ -17,7 +17,7 @@ import calculator
 def main():
 	"""
 	Main module for all others, presents menus in loops for easy end-user accessibility and
-	reusability.
+	re-usability.
 	:return:
 	:rtype:
 	"""
@@ -37,7 +37,7 @@ def main():
 				"\n\n\t\t\t\t\t",
 				my_tools.PyColors.Fg.light_green,
 				"  Project Version <|> Last Updated\n\t\t\t\t\t\t\t",
-				"  0.0.3         12/05/2020",
+				"  0.0.5         12/05/2020",
 				my_tools.PyColors.reset
 			)
 
