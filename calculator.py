@@ -10,32 +10,41 @@ import readline
 import my_tools
 
 
-def add(x, y):
+class Calculator:
 	"""
-	This function adds two numbers
+	This class takes two numbers and will either add, subtract, multiply or divide them.
 	"""
-	return x + y
+	def __init__(self, num1, num2):
+		self.num1 = int(num1)
+		self.num2 = int(num2)
 
+	def add(self):
+		"""
+		This method adds two numbers
+		"""
+		answer = self.num1 + self.num2
+		print("\n", str(self.num1), "+", str(self.num2), "=", str(answer))
 
-def subtract(x, y):
-	"""
-	This function subtracts two numbers
-	"""
-	return x - y
+	def subtract(self):
+		"""
+		This method subtracts two numbers
+		"""
+		answer = self.num1 - self.num2
+		print("\n", str(self.num1), "-", str(self.num2), "=", str(answer))
 
+	def multiply(self):
+		"""
+		This method multiplies two numbers
+		"""
+		answer = self.num1 * self.num2
+		print("\n", str(self.num1), "*", str(self.num2), "=", str(answer))
 
-def multiply(x, y):
-	"""
-	This function multiplies two numbers
-	"""
-	return x * y
-
-
-def divide(x, y):
-	"""
-	This function divides two numbers
-	"""
-	return x / y
+	def divide(self):
+		"""
+		This method divides two numbers
+		"""
+		answer = self.num1 / self.num2
+		print("\n", str(self.num1), "/", str(self.num2), "=", str(answer))
 
 
 def main():
@@ -63,20 +72,20 @@ def main():
 
 		# Check if choice is one of the four options
 		if int(choice) in range(1, 5):
-			num1 = float(input("\n Enter first number: "))
-			num2 = float(input(" Enter second number: "))
+			num1 = input("\n Enter 1st number: ")
+			num2 = input(" Enter 2nd number: ")
+
+			my_calculator = Calculator(num1, num2)
 
 			if choice == "1":
-				print("\n", num1, "+", num2, "=", add(num1, num2))
-
+				my_calculator.add()
 			elif choice == "2":
-				print("\n", num1, "-", num2, "=", subtract(num1, num2))
-
+				my_calculator.subtract()
 			elif choice == "3":
-				print("\n", num1, "*", num2, "=", multiply(num1, num2))
-
+				my_calculator.multiply()
 			elif choice == "4":
-				print("\n", num1, "/", num2, "=", divide(num1, num2))
+				my_calculator.divide()
+
 			input("\n\n Press enter to continue...").strip()
 			break
 
